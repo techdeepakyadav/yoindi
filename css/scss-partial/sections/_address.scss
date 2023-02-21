@@ -1,0 +1,25 @@
+.section-address{
+    row-gap:16px;
+    .rp-coltype-item{
+        .icon-holder{
+            width:44px;
+            height:44px;
+            background: #F6FAFF;
+        }
+        .text-holder{
+            span{
+                text-transform: initial;
+            }
+        }
+    }
+}
+@media (max-width:767px) {
+   .section-address{
+        flex-direction: column;
+        .add-address{
+            .btn{
+                width:100%;
+            }
+        }
+   }    
+}

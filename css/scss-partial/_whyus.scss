@@ -1,0 +1,70 @@
+/* why us section */
+.section-whyus{    
+    .section-heading{
+        margin-bottom: 1rem;
+    }
+}
+
+.whyus-img-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whyus-content-col{
+    .list-group{
+        margin-top: 5rem;
+        border-radius:0.8rem;
+        border:1px solid #CBD4E1;
+    }
+    .list-group-item{
+        display: flex;
+        border:0 none;
+        .icon-holder,.text-holder{
+            padding:1.5rem;
+        }
+        .icon-holder{
+            align-self: center;
+        }
+        .text-holder{
+            label{
+                font-weight: 600;
+            }
+        }
+        &:before{
+            content: "";
+            width:calc(100% - 3.0rem);
+            height:1px;
+            background-color: #CBD4E1;
+            position: absolute;
+            bottom: 0;
+            left:1.5rem;
+        }
+        &:last-child{
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width:767px){
+    .whyus-img-col{
+        display: none;
+    }
+    .whyus-content-col{
+        .list-group{
+            flex-direction: row;
+            overflow:scroll;
+            border: 0 none;
+            gap:1.5rem;
+        }
+        .list-group-item{
+            border:1px solid #CBD4E1;
+            min-width: 75vw;
+            &::before{
+                display: none;
+                border-radius:0.6rem;
+            }
+        }
+    }
+}

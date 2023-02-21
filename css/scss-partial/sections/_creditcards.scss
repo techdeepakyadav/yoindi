@@ -1,0 +1,125 @@
+.section-creditcards{
+    .form-select{
+        padding:8px 32px 8px 20px;
+        border-radius:20px;
+        font-weight: 600;
+        width:auto;
+    }
+    .rp-coltype-item{
+        row-gap: 16px;
+        .item-col{
+            &.item-icontext-col{
+               display: grid; 
+               grid-template-columns: 76px calc(100% - 76px);
+               .icon-holder{
+                width:76px;
+                height: 48px;
+                grid-column: span 1;
+                grid-row:span 2;
+               }
+            }
+        }
+        .text-holder{
+            label{
+                display: flex;
+                gap:16px;
+            }
+        }
+        .item-badge {
+            background: linear-gradient(224.77deg, #C28D5C 0%, #8F542F 139.62%);
+            height: 20px;
+            font-size: 10px;
+            color: #fff;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            padding: 0 15px 0 10px;
+            position: relative;
+            text-transform: capitalize;
+            &:before{
+                content: "";
+                position: absolute;
+                right: -1px;
+                width: 0;
+                height: 0;
+                border-width: 10px 0 10px 6px;
+                border-color: transparent transparent transparent #fff;
+                transform: rotate(180deg);
+                border-style: solid;
+            }
+        }
+        &.card-pre-approved{
+            background-color: #FFFCF3;
+            .item-badge{
+                border-color: transparent transparent transparent #FFFCF3; 
+            }
+        }
+        &.card-instant-approval{
+            background-color: #F5FCF8;
+            .item-badge{
+                background: linear-gradient(135deg, #26B18E 0.55%, #19A784 97.3%);
+                border-color: transparent transparent transparent #F5FCF8; 
+            }
+        }
+    }
+    .card-facilities{
+        > span{
+            display: inline-block;
+            position: relative;
+            padding-left: 7px;
+            &:before{
+                content:"";
+                width:4px;
+                height:4px;
+                border-radius:2px;
+                background-color: #94A3B8;
+                position: absolute;
+                top:6px;
+                left:0;
+            }
+            + span{
+                margin-left: 10px;
+            }
+        }        
+    }
+    @media (max-width:767px){
+        .rp-coltype-item{
+            &.row{
+                &.card-pre-approved{
+                    border: 1px solid #FFD66B;
+                }
+                &.card-instant-approval{
+                    border: 1px solid #007036;
+                }
+            }
+            .item-col{
+                &.item-icontext-col{
+                   grid-template-columns: 50px calc(100% - 76px);
+                   row-gap: 16px;
+                   .icon-holder{
+                    width:50px;
+                    height:32px;
+                    grid-row:span 1;
+                   }
+                   .card-facilities{
+                    grid-column: span 2;
+                   }
+                }
+            }
+            &.row,&.row:last-child{
+                border:1px solid #E2E8F0;
+                border-radius:8px;
+                margin-bottom: 12px;
+            }
+            .text-holder{
+                label{
+                    flex-direction: column-reverse;
+                    gap:10px;
+                    .item-badge{
+                        align-self: flex-start;
+                    }
+                }
+            }
+        }       
+    }
+}

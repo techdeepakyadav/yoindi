@@ -1,0 +1,77 @@
+.section-persoffers{
+    .offer-card{
+        height:100%;
+    }
+    .rp-coltype-item{
+        display:flex;
+        flex-direction: column;
+        row-gap: 15px;
+        height: 100%;
+        .item-col{
+            position:relative;
+            .item-badge{
+                background: linear-gradient(224.77deg, #C28D5C 0%, #8F542F 139.62%);
+                height: 20px;
+                font-size: 10px;
+                color:#fff;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                padding: 0 10px 0 15px;
+                position: absolute;
+                right:-16px;
+                &:before{
+                    content:"";
+                    position: absolute;
+                    left:0;
+                    width: 0;
+                    height: 0;
+                    border-width: 10px 0 10px 6px;
+                    border-color: transparent transparent transparent #fff;
+                    border-style: solid;
+                }
+            }
+        }
+        .item-icontext-col{
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 15px;
+        }
+        .item-button-col{
+            margin-top: auto;
+            align-self: flex-start;
+        }
+        .icon-holder{
+            width: auto;
+            img{
+                max-width: 100%;
+            }
+        }
+        ul{
+            &.list-checked-o-2{
+                margin-top: 15px;
+                li{
+                    font-size: 12px;
+                    &::before{
+                        top:1px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:767px){
+        .offer-card-box{
+            overflow: auto;
+            padding-bottom: 15px;
+            flex-wrap: nowrap;
+            > div{
+                max-width: 90%;
+            }
+        }
+        .rp-coltype-item{
+            .item-button-col{
+                align-self: auto;
+            }
+        }
+    }
+}

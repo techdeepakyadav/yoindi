@@ -1,0 +1,26 @@
+/* points section */
+.points-item-content{
+    background: #F6FAFF;
+    padding:4.8rem 3.2rem;
+    border-radius:1.6rem;
+    height: 100%;
+}
+
+@media (max-width:767px){
+    .points-row{
+        flex-wrap: nowrap;
+        overflow: scroll;
+        > *{
+            max-width: 90%;
+        }
+    }
+    .points-item-content{
+        padding:3.0rem 1.5rem;
+        ul{
+            &.list-checked{
+                margin-bottom: auto;
+            }
+        }
+    }
+    
+}

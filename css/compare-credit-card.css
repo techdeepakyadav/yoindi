@@ -1,0 +1,47 @@
+
+@media (max-width: 1199px) {
+  .banner-section .banner-row {
+    /* min-height: 45rem; */
+  }
+}
+@media (max-width: 767px) {
+  .sec_compare_credit_card .item_center{
+    /* margin-bottom: 50px; */
+  }
+}
+@media (max-width: 576px) {
+  .sec_compare_credit_card .item_center{
+      margin-bottom: 2rem!important;
+    }  
+  .sec_compare_credit_card .navbar-nav .nav-item {
+    text-align: left;
+    width: 100%;
+  }
+  .sec_compare_credit_card .navbar-nav .nav-item:nth-last-of-type(2) {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  .sec_compare_credit_card .navbar-nav .dropdown-toggle::after {
+    float: right;
+  }
+  .sec_compare_credit_card .navbar-nav hr {
+    color: #4d4a4a;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .sec_compare_credit_card .navbar-nav .dropdown-menu {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .sec_compare_credit_card .navbar-nav .menu_divider:after, .without_divider:after{
+    content: '';
+    padding-left: 0em;
+    padding-right: 0em;
+    font-weight: 100;    
+  }
+  .sec_compare_credit_card .navbar-nav .nav-item{    
+    padding-bottom: 0.5em;
+  }
+}

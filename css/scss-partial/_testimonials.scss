@@ -1,0 +1,90 @@
+/* testimonial section */
+.section-testimonials{
+    background-color: #F6FAFF;
+}
+.testi-list{
+    list-style: none;
+    padding: 0;
+    margin-top: 6.0rem;
+}
+.card{
+    border: 0 none;
+    background: #fff;
+    border-radius: 0.6rem;
+    box-shadow: 0px 14px 30px rgba(52, 117, 145, 0.12);
+    &.testi-card{
+        .card-body{
+            padding:3.0rem;
+        }
+        .card-top{
+            gap:1.5rem;
+            margin-bottom: 3.0rem;
+        }
+        .testi-contnt{
+            font-size: 1.4rem;
+            color:#27364B;
+        }
+        .customer-info{
+            label{
+                letter-spacing: -0.0124em;
+            }
+            span{
+                font-size:1.4rem;
+            }
+        }
+    }
+}
+
+
+.testi-carousel{    
+    margin-bottom: 3rem;
+    
+    .carousel-item-inner{
+        float:left;
+        padding:30px 15px;
+    }
+    .carousel-indicators {
+        bottom:-4.0rem;
+        [data-bs-target]{
+            background-color: #CBD4E1;
+            height:1.0rem;
+            width:1.0rem;
+            border-radius:1.0rem;
+            border: 0 none;
+            &.active{
+                background-color:#2E3092;
+                width:2.4rem;
+            }
+        }
+    }
+}
+@media (max-width:767px){
+    .testi-list{
+        overflow: scroll;
+        flex-wrap: nowrap;
+        padding-bottom: 3.5rem;
+        li{
+            max-width: 90%;
+        }
+        .thumb-holder{
+            width: 4.0rem;
+            height:4.0rem;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                width:100%;
+            }
+        }
+        .customer-info{
+            label{
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+            span{
+                font-size:1.1rem;
+            }
+        }
+        
+    }
+    
+}

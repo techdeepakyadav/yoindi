@@ -1,0 +1,43 @@
+.section-profile-brief{
+    > .card{
+        background-color: #F6FAFF;
+        .card{
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+            border:0 none;
+        }
+    }
+    .rp-coltype-item{
+        .icon-holder{
+            width:56px;
+            height:56px;
+        }
+        .text-holder{
+            span{
+                text-transform: initial;
+            }
+        }
+    }
+    @media (max-width:767px){
+        > .card{
+            margin-left:-12px;
+            margin-right:-12px;
+        }
+        .rp-coltype-item{        
+            &:last-child{
+                .item-col{
+                    justify-content: space-between;
+                    flex-direction: row;
+                    padding:15px 0;
+                    border-bottom: 1px solid #E2E8F0;
+                    &:last-child{
+                        border-bottom: 0 none;
+                    }
+                }
+            }
+            .icon-holder{
+                width:44px;
+                height:44px;
+            }
+        }
+    }
+}

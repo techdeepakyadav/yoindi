@@ -1,0 +1,62 @@
+.section-youraccounts,.section-youraccounts2{
+    .cards-block{
+        row-gap: 24px   ;
+    }
+    .cards-block-title{
+        font-size:11px;
+        text-transform: uppercase;
+    }
+    .rp-coltype-item{
+        display: flex;
+        justify-content: space-between;
+    }
+    .item-col{
+        padding: 0;
+        &.item-button-col{
+            .btn{
+                font-size: 10px;
+                margin-left: auto;
+            }
+        }
+        
+    }
+    @media (max-width:767px){
+        &:not(.section-scroll){
+            .cards-block{
+                row-gap: 0;
+            }
+            .card{
+                border: 0 none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            }
+        }
+        &.section-scroll{
+            .cards-block{
+                overflow: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
+.section-youraccounts2{    
+    .card{
+        + .card{
+            margin-top: 24px;
+        }
+    }
+    @media(max-width:767px){
+        .cards-block{
+            > div{
+                + div{
+                    margin-top: 24px;
+                }
+            }
+        }
+        .card{
+            + .card{
+                margin-top: 0;
+            }
+        }
+    }
+}

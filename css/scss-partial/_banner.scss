@@ -1,0 +1,77 @@
+/* banner */
+.banner-section{    
+    padding-bottom: 3.0rem;
+    .banner-row{        
+        min-height: 52.0rem;
+    }
+    .banner-image-holder{
+        order:2;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;   
+    }
+    .banner-content{
+        order:1;
+        padding-bottom: 3.0rem;
+        padding-top:3.0rem;     
+        h2{
+            //font-size:4.0rem;
+            font-size: clamp(22px,3vw,40px);
+            font-weight: 800;
+            margin-bottom:3.0rem;
+        }
+                
+        .btn{
+            padding:1.4rem 2.4rem;
+            font-size:1.6rem;
+            border-radius:2.7rem;
+            align-self: flex-start;
+        }
+    }
+    .carousel-inner{
+        background-color: #F6FAFF;
+    }
+    .carousel-indicators {
+        bottom:-4.0rem;
+        [data-bs-target]{
+            background-color: #CBD4E1;
+            height:1.0rem;
+            width:1.0rem;
+            border-radius:1.0rem;
+            border: 0 none;
+            &.active{
+                background-color:#2E3092;
+                width:2.4rem;
+            }
+        }
+    }
+}
+@media (max-width:1199px){
+    .banner-section{
+        .banner-row{        
+            min-height: 45.0rem;
+        }
+    }    
+}
+@media (max-width:767px){
+    .banner-section{
+        .banner-row{
+            min-height: 40.0rem;
+        }        
+        .banner-image-holder{
+            display: none;
+        }
+        .banner-content{
+            h2{ 
+                margin-bottom: 2.0rem;
+            }
+            ul{
+                margin-bottom: 2.5rem;
+                li{
+                    font-size:1.4rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

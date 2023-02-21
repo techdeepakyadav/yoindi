@@ -1,0 +1,25 @@
+.section-businessdetails{    
+    row-gap: 16px;    
+}
+@media (max-width:767px){         
+    .section-businessdetails{
+        flex-direction: column;
+        .btn-col{
+            .btn{
+                width:100%;
+            }
+        }             
+        .rp-coltype-item{        
+            &:last-child{
+                .item-col{
+                    padding:15px 0;
+                    border-bottom: 1px solid #E2E8F0;
+                    &:last-child{
+                        border-bottom: 0 none;
+                    }
+                }
+            }
+        
+        }
+    }
+}

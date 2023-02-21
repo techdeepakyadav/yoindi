@@ -1,0 +1,69 @@
+/* featured products section */
+.product-list{
+    list-style: none;
+    padding: 0;
+    margin-top: 6.0rem;
+    .card{
+        border-radius: 0.6rem;
+        overflow: hidden;
+    }
+    .card-body{
+        padding:1.5rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 28.0rem;
+    }
+    .card-title{
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: -0.0124em;
+        margin:1.0rem 0 1.5rem;
+    }
+    .publish-date{
+        font-size:1.2rem;
+        .icon-holder{
+            margin-right:1rem;
+            line-height: 1;
+        }
+    }
+    .card-text{
+        font-size:1.4rem;
+        letter-spacing: -0.0048em;
+        font-weight: 400;
+        color:#27364B;
+        overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 1.4; 
+            /* The number of lines to be displayed */
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+
+    }
+    .btn{
+        padding:0.8rem 2.0rem;
+        font-size:1.3rem;
+        font-weight: 600;
+        margin-top:auto;
+    }
+}
+
+@media (max-width:767px){
+    .product-list{
+        overflow: scroll;
+        flex-wrap: nowrap;
+        padding-bottom: 1.5rem;
+        li{
+            max-width: 90%;
+        }
+        .card-body{
+            min-height: 25.0rem;
+        }
+        .card-title{
+            font-size:1.4rem;
+        }
+        .publish-date{
+            font-size:1.1rem;
+        }
+    }
+}

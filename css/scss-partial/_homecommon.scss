@@ -1,0 +1,35 @@
+/* homepage common style */
+.hm-section-pd{
+    padding: 5.0rem 0;     
+}
+.hm-section-pd-2{
+    padding: 7.5rem 0;
+}
+.section-whyus{
+    @extend .hm-section-pd
+}
+.section-points{
+    @extend .hm-section-pd
+}
+
+.section-creditdecision{
+    @extend .hm-section-pd
+}
+.section-partners{
+    @extend .hm-section-pd
+}
+
+.section-testimonials{
+    @extend .hm-section-pd-2
+}
+.section-featprod{
+    @extend .hm-section-pd-2
+}
+@media (max-width:767px){
+    .hm-section-pd{
+        padding: 3.0rem 0;
+    }
+    .hm-section-pd-2{
+        padding: 3rem 0;
+    }
+}

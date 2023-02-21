@@ -1,0 +1,33 @@
+
+.section-faq{
+    .accordion-item{
+        background-color: transparent;
+        border: 0 none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        padding:15px 0;
+        &:last-child{
+            border-bottom: 0 none;
+        }
+        .accordion-button{
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: -0.008em;
+            padding:5px 0;
+            &:not(.collapsed){
+                color: inherit;
+                background-color: transparent;
+                box-shadow: 0 0 0;
+            }
+            &:focus{
+                outline: none;
+                box-shadow: 0 0 0;
+            }
+        }
+        .accordion-body{
+            font-size: 13px;
+            letter-spacing: -0.008em;
+            line-height: 1.4;
+            padding: 0;
+        }
+    }
+}

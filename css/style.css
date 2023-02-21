@@ -1,0 +1,969 @@
+:root {
+  --rp-black-dark-clr:#0F1A2A;
+  --rp-black-light-clr:#27364B;
+}
+
+/* common css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.row {
+  margin-right: calc(var(--bs-gutter-x) * -1);
+  margin-left: calc(var(--bs-gutter-x) * -1);
+}
+.row > * {
+  padding-right: calc(var(--bs-gutter-x) * 1);
+  padding-left: calc(var(--bs-gutter-x) * 1);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+li {
+  font-weight: 400;
+  font-size: 0.8em;
+  line-height: 2.5em;
+}
+
+.blue-heading{
+  color:#2E3092;
+}
+
+.banner-content-three h3{font-size: 32px; font-weight: 500; text-align: center; color:#2E3092; padding-bottom: 10px; border-bottom:1px solid #ddd;}
+.banner-content-three h3 span{font-size: 36px; font-weight: 500; color:#2E3092;}
+.banner-content-three span{font-size: 24px; color: #000; text-align: center; }
+.card-bg { background: #F6FAFF;padding: 30px 0;margin-top: 30px;}
+.card-heading h3 {font-size: 30px;font-weight: 600;}
+.card-box {padding: 20px; min-height: 240px;  background: #fff; border-radius: 10px; margin-top: 20px;box-shadow: 0px 0px 10px 0px #00000042;}
+.card-box h4{font-size: 24px; font-weight: 600;}
+.card-box ul{margin-top:20px;}
+.card-box ul li{ padding: 5px 0; }
+.card-box a{margin-top:20px; display:block; text-decoration: none;}
+.card-box .mobile-img{display: none;}
+.partner-logos ul {display: flex;flex-wrap: wrap; margin-top:20px; padding: 0px;}
+.partner-logos ul li {padding:15px; background: #fff; margin:10px 12px; border-radius:10px;
+box-shadow: 0px 0px 10px 0px #00000021; display: flex; align-items: center;justify-content: center;}
+.partner-logos h3{font-size: 24px; font-weight:bold;}
+
+
+ul.list-checked {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 4rem;
+}
+ul.list-checked li {
+  font-size: 1.6rem;
+  font-weight: 500;
+  position: relative;
+  padding-left: 3rem;
+  letter-spacing: -0.0124em;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+ul.list-checked li:before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../images/icon-check.png");
+  border-radius: 50%;
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+}
+ul.list-counter {
+  counter-reset: listCount;
+  list-style: none;
+}
+ul.list-counter li {
+  position: relative;
+  padding-left: 5.5rem;
+  line-height: 1.8;
+  padding-bottom: 3rem;
+}
+ul.list-counter li label {
+  font-weight: 600;
+}
+ul.list-counter li::before {
+  counter-increment: listCount;
+  content: counter(listCount);
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #00AF54;
+  border-radius: 2rem;
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: 0 0 0 1.2rem #fff;
+}
+ul.list-counter li::after {
+  content: "";
+  width: 0.1rem;
+  background-color: #00AF54;
+  height: 100%;
+  position: absolute;
+  left: 1.5rem;
+  top: 4.2rem;
+}
+ul.list-counter li:last-child::after {
+  display: none;
+}
+
+.flex-type1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-heading {
+  font-size: 3rem;
+  font-size: clamp(18px, 3vw, 30px);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.rp-container {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 1.2rem;
+  }
+  .rp-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .section-heading {
+    font-weight: 700;
+    letter-spacing: -0.0124em;
+    margin-bottom: 1.5rem;
+  }
+  ul.list-checked li {
+    font-size: 1.3rem;
+  }
+  ul.list-checked li::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: cover;
+  }
+
+  .card-box {
+    display: block!important;
+    min-height: 220px;
+    padding: 15px;
+}
+
+.card-box h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-box ul li {
+  padding: 5px 0;
+  display: none;
+}
+
+.card-box .desktop-img{display: none;}
+
+.card-box .mobile-img {
+  width: 110px;
+  display: block;
+  margin-top: 20px;
+}
+
+.card-heading h3 {font-size: 18px;font-weight: bold;}
+.banner-content-three h3{font-size: 24px;}
+.banner-content-three h3 span {font-size: 24px;}
+.partner-logos ul li {width: 45%;margin: 10px 8px;}
+
+}
+/* button css for the site */
+.btn {
+  border-radius: 2rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2E3092;
+  border-color: #2E3092;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #252675;
+  border-color: #252675;
+}
+.btn-primary:focus {
+  color: #fff;
+  background-color: #252675;
+  border-color: #252675;
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+
+.btn-check:focus + .btn-primary {
+  color: #fff;
+  background-color: #252675;
+  border-color: #252675;
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+
+.btn-light {
+  color: #2E3092;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+.btn-light:hover {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+}
+.btn-light:focus {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+  box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+}
+.btn-light:active {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+}
+
+.btn-check:focus + .btn-light {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+  box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+}
+.btn-check:active + .btn-light {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+}
+.btn-check:checked + .btn-light {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+}
+
+.btn-light.active {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+}
+
+.show > .btn-light.dropdown-toggle {
+  color: #2E3092;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+}
+
+/* header css */
+header {
+  border-bottom: 0.1rem solid #CBD4E1;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.navbar-light .navbar-toggler {
+  border: 0 none;
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("../images/hamburger.png");
+}
+.navbar-light .navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+.navbar-light .navbar-nav .nav-item:not(.nav-item-btn) {
+  margin-right: 2.5rem;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--rp-black-dark-clr);
+  font-size: clamp(12px, 3vw, 14px);
+  font-weight: 600;
+}
+.navbar-light .navbar-nav .btn {
+  font-size: clamp(12px, 3vw, 13px);
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+}
+.navbar-light .dropdown-menu {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .navbar-light .navbar-nav {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  .navbar-light .navbar-nav .nav-item {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-light .navbar-nav .nav-item:not(.nav-item-btn) {
+    margin-right: 0;
+  }
+  .navbar-light .navbar-nav .nav-item:nth-last-of-type(2) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .navbar-light .navbar-nav .dropdown-menu {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.site-footer {
+  background: #0F1A2A;
+  padding-top: 5rem;
+  color: #CBD4E1;
+  letter-spacing: -0.0048em;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.site-footer .footer-top-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+.site-footer a {
+  color: #94A3B8;
+  letter-spacing: -0.008em;
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-footer h2, .site-footer h3 {
+  color: #fff;
+  font-weight: 600;
+}
+.site-footer .brand-brief {
+  margin-bottom: 3rem;
+}
+.site-footer .footer-logo {
+  margin-bottom: 2.5rem;
+  display: inline-block;
+}
+.site-footer .footer-nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.site-footer .sitemap-box {
+  margin-bottom: 5rem;
+}
+.site-footer .sitemap-box h3 {
+  margin-bottom: 3rem;
+}
+.site-footer .social-links {
+  display: flex;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.site-footer .social-links a {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 4.8rem;
+  background-color: #27364B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-footer .social-links a img {
+  transition: 0.2s linear;
+  transform: scale(1);
+}
+.site-footer .social-links a:hover img {
+  transform: scale(1.1);
+  transition: 0.2s linear;
+}
+.site-footer .copyright-row {
+  font-size: 1.4rem;
+  margin-top: 5rem;
+}
+.site-footer .copyright-row > div {
+  border-top: 1px solid #475569;
+}
+.site-footer .newsletter-box h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.site-footer .input-group {
+  background-color: #1E2A3B;
+  border-radius: 4rem;
+  padding: 0 1rem;
+}
+.site-footer .input-group:before {
+  content: "";
+  display: block;
+  background: url("/images/icon-email.png");
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  transform: translateY(-50%);
+}
+.site-footer .input-group .form-control {
+  padding: 2.5rem 1.5rem 2.5rem 4.5rem;
+  font-size: 1.4rem;
+  background: none;
+  border: 0 none;
+  color: #CBD4E1;
+}
+.site-footer .input-group .btn {
+  align-self: center;
+  padding: 1.4rem 2.4rem;
+  font-size: 1.6rem;
+  border-radius: 2.5rem !important;
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    font-size: 1.2rem;
+  }
+  .site-footer .footer-top-row {
+    grid-template-columns: 1fr;
+  }
+  .site-footer h3, .site-footer .newsletter-box h3 {
+    font-size: 1.6rem;
+  }
+  .site-footer .newsletter-box {
+    margin-bottom: 4rem;
+  }
+}/*# sourceMappingURL=style.css.map */
+
+
+/* ===============================
+CSS for Personal Loan Page
+=================================*/
+.title_underscore{
+  width : 70px;
+  border-top: 3px solid #2f3192;
+  margin-top: -12px;
+  margin-bottom: 20px;
+}
+.pl_left_div img{
+  height: 400px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.sec_apply_instant_loan .pl_right_div{
+  padding: 120px 50px 0px 50px;
+}
+.pl_right_div .apply_loan h2{
+  color: #2f3192;
+}
+.pl_right_div .apply_loan .input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #2f3192;
+  border: 1px solid #2f3192;
+  border-radius: 0.25rem;
+}
+.pl_right_div .apply_loan .form-control {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #2f3192;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #2f3192;
+}
+.pl_right_div .apply_loan .btn-group-lg > .btn, .btn-lg {
+  padding: 0.9rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* ===============================
+CSS for Credit Card Page
+=================================*/
+.breadcrumb {
+  margin-bottom: 0rem;
+}
+.sec_credit_card .btn{
+  font-size: 1.5rem;
+}
+.sec_latest_credit_card img{
+  border-radius: 14px;
+  /* border: 3px solid rgb(105, 102, 102); */
+}
+.sec_latest_credit_card .card{
+  border-radius: 14px;
+}
+.sec_latest_credit_card .overlay {
+  border-radius: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2f3192;
+  opacity: 0.9;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.sec_latest_credit_card .card:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.sec_latest_credit_card .text {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+}
+.form-control, .form-control:focus{
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+}
+.btn:focus{
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+}
+.accordion-item {
+  border: 1px solid #2f3192;
+  margin-top: 10px;
+  border-top: 1px solid #2f3192!important;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.accordion-button, .accordion-button:focus{
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+}
+
+/* ===============================
+CSS for Compare Credit Card Page
+=================================*/
+.sec_compare_credit_card .section-creditcards .form-select {
+  padding: 8px 32px 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  width: 100%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.sec_compare_credit_card .form-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;  
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.form-select, .form-select:focus{
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  border: 1px solid #2f3192;
+}
+.sec_compare_credit_card .card_item{
+  /* border-bottom: 1px solid #E2E8F0; */
+}
+.sec_compare_credit_card .card-header {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.03); */
+  /* background-color: #ffffff; */
+  border-bottom: 0;
+}
+.sec_compare_credit_card .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.sec_compare_credit_card .card-facilities > span {
+  display: inline-block;
+  position: relative;
+  padding-left: 7px;
+  /* font-size: 11px; */
+}
+/* .sec_compare_credit_card .card-facilities > span:before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2f3192;
+  position: absolute;
+  top: 6px;
+  left: 0;
+} */
+
+.sec_compare_credit_card .navbar .navbar-brand, .navbar-toggler i{
+  color: #2e3093;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.sec_compare_credit_card .navbar{
+  background-color: #e0f7fd;
+  /* background-color: #0e29c654; */
+}
+.sec_compare_credit_card .card .card-header{
+  background-color: #0e29c61a;
+}
+.sec_compare_credit_card .card_item .item_center{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.sec_compare_credit_card .card_item .btn{
+  align-items: center;
+  font-size: 1.4rem;
+  border-radius: 0.1em;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  /* padding-left: 2.5rem;
+  padding-right: 2.5rem; */
+}
+.sec_compare_credit_card .card_img_reward img{
+  width: 32px;
+}
+.sec_compare_credit_card .navbar-light .navbar-toggler-icon {
+  /* background-image: url(../images/hamburger.pnng); */
+}
+.sec_compare_credit_card .navbar-toggler {
+  /* padding: 0.25rem 0.75rem!important; */
+  font-size: 2.25rem;
+}
+.sec_compare_credit_card .dropdown-menu {
+  min-width: 20rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  font-size: 1.4rem;
+  /* color: #2f3192; */
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0.1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+.sec_compare_credit_card .dropdown-menu label{
+  padding-top: 0px;
+  padding-left: 10px;
+}
+.sec_compare_credit_card .dropdown-menu .form-check{
+  padding-bottom: 1rem;
+}
+.sec_compare_credit_card .dropdown-menu .form-check-input[type="checkbox"] {
+  border-radius: 0.2em;
+  height: 18px;
+  width: 18px;
+}
+.sec_compare_credit_card .dropdown-menu .form-check-input {
+  border: 1px solid #2f3192;
+}
+.sec_compare_credit_card .navbar-nav .menu_divider:after{
+  content: '|';
+	padding-left: 1em;
+	padding-right: 0em;
+  font-weight: 100;
+  color: #a2a6eb;
+}
+
+/* ===============================
+CSS for Credit Score Page
+=================================*/
+h3{
+  font-weight: 700;
+}
+.sec_credit_score .nav-link{
+  padding: 15px;
+  width: 150px;
+  height: 65px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #2e3092;
+  background-color: #fff;
+  border-left: 5px solid #2e3092;
+}
+.sec_credit_score .tab-content .btn{
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sec_offer h3{
+  color: #2e3092;
+}
+.sec_offer .card-header {
+  padding: 0rem 0rem;
+  border-bottom: 0;
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, rgba(253,77,29,1) 9%, rgba(244,132,11,1) 100%);
+}
+.sec_offer .preapproved{
+  border-bottom: 2px solid  rgb(253,77,29);
+  min-height: 250px;
+}
+.sec_offer .credit_score{
+  border-top: 2px solid  rgb(253,77,29);
+  border-bottom: 2px solid  rgb(253,77,29);
+  min-height: 250px;
+}
+.sec_offer .preapproved .list-checked li{
+  display: inline-block!important;
+  margin-bottom: 0!important;
+  width: 180px;
+  font-size: 1.4rem;
+}
+.sec_offer .credit_score .card {
+  border: 1px solid #e7f1ff;
+  background: #fff;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+}
+.sec_offer .credit_score .credit_score_per{
+  color: #2e3092;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.sec_faq .credit_healthy{
+  min-height: 450px;
+  background: linear-gradient(180deg, rgba(253,222,249,1) 0%, rgba(230,226,253,1) 52%);
+}
+
+/* ===============================
+CSS for Side Apply and Footer button
+=================================*/
+.btn_apply_now{
+  position: fixed;
+  transform: rotate(180deg);
+  top: 200px;
+  right: 0px;
+}
+.btn_apply_now_footer{
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+.btn_apply_now_footer .row{
+  text-align: center;
+}
+.btn_apply_now_footer .row .col-6{
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn_apply_now_footer .btn{
+  width: 100%;
+  border-radius: 0;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.btn_apply_now_footer .btn_left{
+  background-color: #2e3093;
+  border-color: #2e3093;
+}
+.btn_apply_now_footer .btn_right{
+  background-color: #ff1663;
+  border-color: #ff1663;
+}
+
+/* ===============================
+CSS for EMI Calculator Page
+=================================*/
+.sec_emi_calculator h3{
+  color: #2e3092;
+}
+.sec_emi_calculator .card-header {
+  padding: 0.5rem 0rem;
+  border-bottom: 0;
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, rgba(253,77,29,1) 9%, rgba(244,132,11,1) 100%);
+}
+.sec_emi_calculator .preapproved{
+  /* border-bottom: 2px solid  rgb(253,77,29); */
+  border: 0.1px solid  rgb(253,77,29);
+  /* min-height: 250px; */
+}
+.sec_emi_calculator .preapproved .list-checked li{
+  display: inline-block!important;
+  margin-bottom: 0!important;
+  width: 180px;
+  font-size: 1.4rem;
+}
+.sec_emi_calculator .emi_calculator .form-control {
+  display: block;
+  width: 100%;
+  padding: 1rem 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  color: rgb(253,77,29);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: 1px solid rgb(253,77,29);
+}
+
+.sec_emi_calculator .emi_calculator .input-group-text{
+  background-color: rgb(253,77,29);
+  width: 50px!important;
+  font-size: 2rem;
+  font-weight: 500;
+  /* padding: 0.375rem 2rem; */
+  /* border: 1px solid #252675; */
+  border: 1px solid rgb(253,77,29);
+  color: #fff;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+.sec_emi_calculator .div_fun_btn .btn{
+  padding: 1rem 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.sec_emi_calculator .table{
+  width: 100%;
+}
+.sec_emi_calculator .table td{
+  padding-left: 20px;
+  padding-top: 20px!important;
+  font-weight: 400;
+}
+.sec_emi_calculator .table .colorBlue{
+  /* color: #2e3092; */
+  color: rgb(253,77,29);
+  font-weight: 100;
+}
+
+.sec_about_emi_calculator h2{
+  font-weight: 600;
+}
+.sec_about_emi_calculator p{
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.7em;
+}
+
+/* ========================================================
+CSS for Axis Bank Vistara Infinite Credit Card Page
+=========================================================*/
+.sec_ab_vistara h3{
+  color: #2e3092;
+}
+.author-image {
+  width: 10%;
+  float: left;
+  margin-left: 2%;
+}
+img.author-image-size {
+  width: 69%;
+  border-radius: 0%;
+}
+.author-disc {
+  width: 69%;
+  float: left;
+}
+/* .sec_ab_vistara .calculator_img img{
+  opacity: 0.5;
+} */
+
+.sec_ab_vistara .calculator_img .card{
+  /* min-height: 300px;
+  position: relative;
+  margin-top: -70%; */
+  /* background-color: transparent; */
+  border: 0;
+  /* background: linear-gradient(90deg, rgba(253,77,29,1) 9%, rgba(244,132,11,1) 100%); */
+  background: linear-gradient(90deg, rgba(255,255,255,0) 9%, rgba(244,132,11,1) 100%);
+}
+
+.sec_ab_vistara .input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #2f3192;
+  border: 1px solid #2f3192;
+  border-radius: 0.25rem;
+}
+.sec_ab_vistara .form-control {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2f3192;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #2f3192;
+}
+.sec_ab_vistara .btn-group-lg > .btn, .btn-lg {
+  padding: 0.9rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.sec_main_content .right_div .card{
+  border: 0;
+}

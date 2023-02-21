@@ -1,0 +1,109 @@
+/* button css for the site */
+$clr-white: #fff;
+$bg-primary: #2E3092;
+$bg-primary_2: #252675;
+$border-primary: #2E3092;
+$border-primary_2: #252675;
+
+.btn{
+    border-radius: 2.0rem;
+}
+
+.btn-primary {
+	color: $clr-white;
+	background-color: $bg-primary;
+	border-color: $border-primary;
+	&:hover {
+		color: $clr-white;
+		background-color: $bg-primary_2;
+		border-color: $border-primary_2;
+	}
+	&:focus {
+		color: $clr-white;
+		background-color: $bg-primary_2;
+		border-color: $border-primary_2;
+		box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+	}
+}
+.btn-check {
+	&:focus {
+		+ {
+			.btn-primary {
+				color: $clr-white;
+				background-color: $bg-primary_2;
+				border-color: $border-primary_2;
+				box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+			}
+		}
+	}
+}
+
+$clr-primary: #2E3092;
+$bg-light: #f8f9fa;
+$bg-light_2: #f9fafb;
+$border-light: #f8f9fa;
+$border-light_2: #f9fafb;
+
+.btn-light {
+	color: $clr-primary;
+	background-color: $bg-light;
+	border-color: $border-light;
+	&:hover {
+		color: $clr-primary;
+		background-color: $bg-light_2;
+		border-color: $border-light_2;
+	}
+	&:focus {
+		color: $clr-primary;
+		background-color: $bg-light_2;
+		border-color: $border-light_2;
+		box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+	}
+	&:active {
+		color: $clr-primary;
+		background-color: $bg-light_2;
+		border-color: $border-light_2;
+	}
+}
+.btn-check {
+	&:focus {
+		+ {
+			.btn-light {
+				color: $clr-primary;
+				background-color: $bg-light_2;
+				border-color: $border-light_2;
+				box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
+			}
+		}
+	}
+	&:active {
+		+ {
+			.btn-light {
+				color: $clr-primary;
+				background-color: $bg-light_2;
+				border-color: $border-light_2;
+			}
+		}
+	}
+	&:checked {
+		+ {
+			.btn-light {
+				color: $clr-primary;
+				background-color: $bg-light_2;
+				border-color: $border-light_2;
+			}
+		}
+	}
+}
+.btn-light.active {
+	color: $clr-primary;
+	background-color: $bg-light_2;
+	border-color: $border-light_2;
+}
+.show {
+	>.btn-light.dropdown-toggle {
+		color: $clr-primary;
+		background-color: $bg-light_2;
+		border-color: $border-light_2;
+	}
+}

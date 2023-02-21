@@ -1,0 +1,39 @@
+/* partners logo section */
+.scroll-box{
+    overflow: hidden;
+}
+.partners-list{
+    display:flex;
+    gap:3rem;
+    justify-content: space-between;
+    animation: scroll 35s linear infinite;
+    &:hover{
+        animation-play-state: paused;
+    }
+    img{
+        filter: grayscale(1);
+        max-width: 100%;
+        
+    }
+    li{
+        min-width:111px;
+    }
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-111px * 8));
+    }
+}
+@media(max-width:767px){
+    .partners-list{
+        /*overflow: scroll;
+        padding-bottom: 1.5rem;*/
+        img{
+            max-width: initial;
+        }
+    }
+}

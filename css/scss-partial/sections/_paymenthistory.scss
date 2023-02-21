@@ -1,0 +1,73 @@
+.section-paymenthistory{
+    .rp-coltype-item{
+        padding: 0;
+    }
+    .item-col{
+        border: 1px solid #E2E8F0;
+        border-radius: 4px;
+        padding: 16px;
+        row-gap: 5px;
+        padding:10px;
+        border-radius: 0;
+        &.alert{
+            margin: 0;
+        }
+        &.alert-success{            
+            border-left: 2px solid #00AF54;
+        }
+        &.alert-danger{            
+            border-left: 2px solid #F57B8A;
+        }
+        label{
+            font-size:12px;
+        }
+        span{
+            color: #475569;
+        }
+        .content-desktop,.content-mobile{
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+        }
+        .content-mobile{
+            display: none;
+        }
+    }
+    .rp-coltype-item{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap:16px;
+    }
+    .heading-block{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 15px;
+    }
+   
+}
+@media (max-width:767px){
+
+    .section-paymenthistory{
+        .item-col{
+            border:0 none!important;
+            background:none!important;
+            .content-desktop{
+                display: none;
+            }
+            .content-mobile{
+                display: flex;
+                align-items: center;
+                .icon{
+                    font-weight: 600;
+                }
+            }
+            
+        }
+        .form-select{
+            background-color: #F6F8FC;
+            border-radius: 6px;
+        }
+        
+    }  
+}

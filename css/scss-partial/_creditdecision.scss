@@ -1,0 +1,40 @@
+/* credit decision section */
+.creditdecision-row{
+    row-gap: 3.2rem;
+    margin-top:6rem;
+}
+
+.rp-notes{
+    min-height: 33.8rem;
+    .icon-holder{
+        width:4.8rem;
+        height:4.8rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F6FAFF;
+        margin-bottom: 2.4rem;
+    }
+    p{
+        font-size:1.4rem;
+    }
+}
+
+@media(max-width:767px){
+    .creditdecision-row{
+        flex-wrap: nowrap;
+        overflow: scroll;
+        column-gap: 1.5rem;
+        padding:0 1.5rem;
+        margin-top: 3.0rem;
+        > .rp-notes{
+            max-width: 95%;
+            min-height: inherit;
+            border: 1px solid #E2E8F0;
+            border-radius: 0.8rem;
+            padding-top:1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+}

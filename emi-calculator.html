@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YoIndi - EMI Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!--fonts css-->
+    <link href="css/fonts.css" rel="stylesheet" />
+    <!--custom common css-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--custom homepage css-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://www.calculatorhut.com/css/embedemi.css" /> -->
+    <script type="text/javascript" src="https://calculatorhut.com/js/em.js" ></script>
+
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="https://yoindi.com/"><img src="images/logo.png" alt="logo" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://yoindi.com/">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Loans
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Home Loans</a></li>
+                                <li><a class="dropdown-item" href="#">Personal Loan</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Credit Cards</a>
+                        </li>
+                        <!-- <li class="nav-item nav-item-btn">
+                            <a class="btn btn-light" href="#">Login</a>
+                        </li>
+                        <li class="nav-item nav-item-btn ms-lg-4">
+                            <a class="btn btn-primary" href="#">Register Now</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--header ends-->
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb p-2 bg-light d-none d-sm-block">
+        <div class="container rp-container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto">
+                            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">EMI Calculator</li>
+                                </ol>
+                            </nav>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Section EMI CAlculator -->
+    <section class="sec_emi_calculator p-5">
+        <div class="container rp-container">
+            <div class="row">
+                <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mb-3">
+                    <h3 class="pb-3">
+                        <i class="bi bi-calculator"></i> EMI Calculator
+                    </h3>
+                    <div class="card preapproved">
+                        <div class="card-header text-center bg-warning text-white">
+                            <b>Calculat Your EMI</b>
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-3 emi_calculator">
+                                        <div class="mb-4">
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping"> ₹ </span>
+                                                <input type="number" class="form-control" id="firstnumber" placeholder="Loan amount">
+                                            </div>
+                                            <div class="d-none">
+                                                <select name="times" id="perof" disabled>
+                                                    <option value="₹" selected="yes">₹</option>
+                                                    <option value="$">$</option>
+                                                    <option value="£">£</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping">%</span>
+                                                <input type="number" class="form-control" id="diff" placeholder="Interest rate">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <div class="input-group flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping"><i class="bi bi-calendar-check"></i></span>
+                                                <input type="number" class="form-control" id="nth" placeholder="Loan tenure in months" >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none">
+                                            <select name="time" id="perof1">
+                                                <option value="1" selected="yes">Months</option>
+                                                <option value="2">Years</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="div_fun_btn">
+                                            <div class="input-group flex-nowrap">
+                                                <button type="button" id="cal" class="btn btn-primary"><span>Calculate</span></button>
+                                                <button type="button" id="cle" class="btn btn-danger"><span>Clear</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                                <tr class="border-bottom">
+                                                    <td class="tg-s268">Loan EMI</td>
+                                                    <td class="tg-s268 colorBlue" id="e">₹00.00</td>
+                                                </tr>
+                                                <tr class="border-bottom">
+                                                    <td class="tg-s268">Total Interest</td>
+                                                    <td class="tg-s268 colorBlue" id="y">₹00.00</td>
+                                                </tr>
+                                                <tr class="border-bottom">
+                                                    <td class="tg-s268">Total Amount</td>
+                                                    <td class="tg-s268 colorBlue" id="x">₹00.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-3">
+                    <div class="calculator_img p-5 mt-5">
+                        <img class="img-fluid" src="images/calculator.jpg" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Section About EMI Calculator -->
+    <section class="sec_about_emi_calculator p-5 bg-light">
+        <div class="container rp-container">
+            <div class="row">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h2 class="pt-3">
+                        EMI Calculator
+                    </h2>
+                    <p>
+                        Lending is an age-old process that provides the required funds to the potential borrower. The conditions are that the borrower has to repay the loan amount at a rate of interest and within a fixed period. Now, repaying the whole amount at once creates a huge burden on the borrowers. Hence, EMIs take the responsibility to divide those burdens into easy equated monthly installmentsthat a borrower has to pay each month of the tenure. Nowadays, an EMI calculator efficiently does the calculation in a blink to provide a perspective of the possible financial responsibility. Read on to make your perception clear about a loan EMI calculator.
+                    </p>
+
+                    <h2 class="pt-3">
+                        What is a Loan EMI Calculator?
+                    </h2>
+                    <p>
+                        An EMI is a monthly payable portion of loan repayment. Borrowers use to consider EMI as a vital factor before taking up a loan. Because it creates an effect on their monthly budget and they have to judge their financial ability to repay the loan without any glitch. Thus EMI calculation is compulsory for the borrowers before borrowing funds from the lenders. And a loan EMI calculator can help them. A loan EMI calculator is a financial instrument that online lenders and credit platforms offer to borrowers free of cost. No matter what kind of loan you’re going to apply for, an EMI calculator can calculate when you put loan amount, tenure, and rate of interest (ROI) in the calculator. The instant and accurate EMI calculation saves time and helps to alter your monthly budget to get the loan that you need.
+                    </p>
+
+                    <h2 class="pt-3">
+                        How are Loan EMIs Calculated?
+                    </h2>
+                    <p>
+                        When you pay an EMI, you’re repaying a part of the principal along with some interest. That interest can be at a fixed rate or a floating rate. Unlike fixed ROI, floating ROI keeps changing from time to time. And your EMI will also keep fluctuating. But the formula to calculate the EMI is constant which is EMI=[PxRx(1+R)N]/[ (1+R)N-1]. Here you should know the vital components that construct this formula, such as P or principal, R or ROI, and N or tenure.
+                    </p>
+                    <p>
+                        <strong>For example, if you borrow Rs. 2,00,000 for 2 years at 20% ROI p.a., then as per the formula?</strong>
+                        <br />P= 2,00,000
+                        <br />N= 2 year= (12x2) months= 24 months
+                        <br />R= 20% p.a.= 20/12= 1.66% p.m.
+                        <br />So, the EMI will be [PxRx(1+R)N]/[ (1+R)N-1]
+                        <br />=[2,00,000x1.66/100x(1+1.66/100)24]/ [(1+1.66/100)24-1]
+                        <br />=Rs. 10,179.16
+                        <br />The whole calculation can be time consuming but not for an online EMI calculator. It can calculate any amount easily.
+                    </p>
+
+                    <h2 class="pt-3">
+                        How an EMI Calculator Works?
+                    </h2>
+                    <p>
+                        The EMI calculation process of an EMI calculator requires the basic yet variable components such as loan amount, rate of interest, and tenure. And the EMI will be different depending on these components.
+                    </p>
+                    <p>
+                        <strong>Loan Amount</strong><br />
+                        Also referred to as principal, the loan amount is the base on which your interest will be payable. Irrespective of the loan type, your EMI will keep increasing during the calculation if you opt for a higher amount.
+                    </p>
+                    <p>
+                        <strong>Rate of Interest (ROI)</strong><br />
+                        The interest you’re going to pay also depends on the ROI you’re opting for or the lender is going to apply. This can be different for different loans and lenders. Besides, the types of interest such as floating or variable can also make a huge difference in the EMIs.
+                    </p>
+                    <p>
+                        <strong>Tenure</strong><br />
+                        Depending on the type of loan you’re applying for, your tenure will vary. It also depends on the lender and the amount you’re asking for. Besides, the ROI also has connections with tenure. An EMI calculator, can deal with all of these variable components and show you the exact result of the calculation.
+                    </p>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section class="sec_faq p-5">
+        <div class="container rp-container">
+            <div class="row">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h2 class="section-heading" style="padding-top: 05px;">
+                        Frequently Asked Questions
+                    </h2>
+                    <div class="title_underscore"></div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h3>1. How can I apply for a Credit Card?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    You can simply visit the official web page of Roopya and fill in the form. A representative will verify your information, and your loan will be credited to your account within the lowest time frame which can be as low as 10 seconds.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h3>2. What are the documents required for credit card?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    To avail a credit card, the documents you need to provide are:
+                                    <ul>
+                                        <li>Aadhar card/ Voter Id Card (To verify your name, address proof and nationality)</li>
+                                        <li>Bank Account Details (To transfer the funds)</li>
+                                        <li>Proof of Your Earnings (To prove that you have a certain earning and capable of repaying the loan.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h3>3.  Do you offer top-up on existing credit card?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    If you want a top up on your existing credit card, and have been paying your EMI regularly, then we are always ready to help you with a top up, even though you have an existing one.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <h3>4.  How does credit card work?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    As the name suggests itself, a credit card is something you can avail to meet any of your personal needs. Some of the key features of credit card are:
+                                    <ul>
+                                        <li>Fast Transfer of Funds</li>
+                                        <li>Minimum Documentation Required</li>
+                                        <li>Flexible Loan Amount and EMI</li>
+                                        <li>Flexible Usage</li>
+                                    </ul>
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <h3>5.  How can I repay my credit card?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    You can repay your credit card at your convenience. The only thing you have to do is to select the method you want to choose, to repay your loan. Some of the methods available to repay your EMI as of now are: Automatic Payment – You can set up auto-pay through Internet banking, and the amount will be debited from your account on the mentioned day. Manual Online Transfer – You can transfer your funds online by yourself to repay your EMI as well. Cheques – You can also use post-dated cheques or drafts to repay your EMI if that’s convenient for you. Standing Instructions – You can instruct your bank to make the payment for your EMI on your behalf on a particular date. Please note that repayment options vary from organization to organization. Hence, it's best to verify the repayment options while availing of your personal loan.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <h3>6.  How can I know what my EMI amount is?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    You can easily know your EMI amount from the Credit Card EMI Calculator designed by us. Just enter your loan amount, preferred tenure of the loan, and the interest rate, and the calculator will display your EMI rate.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <h3>7.  What are credit card eligibility factors?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    To be eligible for a credit card you have to meet 3 major criteria. Once you meet them, availing a personal loan is no big deal. The 3 criteria that you must meet to be eligible for a personal loan are:
+                                    <ul>
+                                        <li>You have to Above 21 Years of Age while applying for the Loan.</li>
+                                        <li>You must have a minimum of income of Rs. 15000/month.</li>
+                                        <li>To prove your employment stability you must have worked at least for 2 years in your current profession, be it business or service (including at least 1 year of service in the current organization, if employed.)</li>
+                                    </ul>
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <h3>8.  How is a personal disbursed?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    Once your credit card is approved and you have signed the loan application, you can choose 2 options to get your funds transferred.<br> Online Transfer – The amount will be directly sent to your bank account<br> Payee Cheque – We will send an account payee cheque to your address by post which you can en cash later.<br> Please note that sending the cheque by post is completely safe and we ensure that they reach to you safely.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingNine">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <h3>9.  What is pre-approved credit card?</h3>
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                    This is a special category of credit card, which a bank offers only when you have an account on that bank for a particular amount of time. The bank decided the loan amount (non-negotiable), which they can pay to you, and the process requires minimum to no documentation as well, since the bank has all your information already. The availing time of a pre-approved credit card can be as fast as 10 seconds only.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Blog -->
+    <section class="sec_blog p-5 bg-light">
+        <div class="container rp-container">
+            <div class="row">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h2 class="section-heading" style="padding-top: 05px;">
+                        Recommended Blogs on Credit Card
+                    </h2>
+                    <div class="title_underscore"></div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="card">
+                        <img src="images/blog-01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-credit-card-2-back-fill"></i> Credit Cards</h5>
+                            <h2 class="py-3">Best credit cards for airport lounge access in 2023</h2>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary btn-lg">More info  <i class="bi bi-arrow-right-short"></i></a>
+                            <span class="float-end text-muted p-3"><small><i class="bi bi-clock-fill"></i> JAN 27, 2023</small></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="card">
+                        <img src="images/blog-02.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-credit-card-2-back-fill"></i> Credit Cards</h5>
+                            <h2 class="py-3">Best Fuel Credit Cards in India <br>2022</h2>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary btn-lg">More info  <i class="bi bi-arrow-right-short"></i></a>
+                            <span class="float-end text-muted p-3"><small><i class="bi bi-clock-fill"></i> JAN 27, 2023</small></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="card">
+                        <img src="images/blog-03.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="bi bi-credit-card-2-back-fill"></i> Credit Cards</h5>
+                            <h2 class="py-3">Best Credit Cards for Online Shopping in 2023</h2>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary btn-lg">More info  <i class="bi bi-arrow-right-short"></i></a>
+                            <span class="float-end text-muted p-3"><small><i class="bi bi-clock-fill"></i> JAN 27, 2023</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Now Button -->
+    <div class="btn_apply_now">
+        <a href="">
+          <img src="images/applynow.png" alt="Apply Now" loading="lazy" />
+        </a>
+    </div>
+
+    <div class="btn_apply_now_footer d-lg-none">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <button type="button" class="btn btn-primary btn_left text-white">Compare Credit Card</button>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+            <button type="button" class="btn btn-warning btn_right text-white">Apply Instant Loan</button>
+            </div>
+        </div>
+    </div>
+    <!-- ./Apply Now Button -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container rp-container">
+            <div class="footer-top-row">
+                <div class="col-left">
+                    <div class="brand-brief">
+                        <a class="footer-logo" href="#">
+                            <img src="images/logo-white.png" alt="footer logo" loading="lazy" />
+                        </a>
+
+                        <p>
+                            Our credit-decision making engine compares thousands of data.
+                            This helps our customers choose best rates & benefits to fulfil
+                            their financial goals. We continue to hustle to help you make
+                            best possible financial decisions.
+                        </p>
+                    </div>
+                    <div class="newsletter-box">
+                        <h3>Newsletter</h3>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your email"
+                                aria-label="email address" />
+                            <button class="btn btn-primary" type="button">Button</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-right">
+                    <div class="sitemap-box">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3>Site Maps</h3>
+                                <nav class="footer-nav">
+                                    <a href="personal-loan.html">Personal Loan</a>
+                                    <a href="#">Home Loan</a>
+                                    <a href="credit-card.html">Credit Cards</a>
+                                    <a href="#">EMI Calculator</a>
+                                </nav>
+                            </div>
+                            <div class="col-6">
+                                <h3>Site Maps</h3>
+                                <nav class="footer-nav">
+                                    <a href="terms-of-use.html">Terms of Use</a>
+                                    <a href="privacy-policy.html">Privacy &amp; Policy</a>
+                                    <a href="disclaimer.html">Disclaimer</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sitemap-box ends-->
+                    <nav class="social-links">
+                        <a href="#"><img src="images/icon-twitter.png" alt="twitter icon" loading="lazy" /></a>
+                        <a href="#"><img src="images/icon-facebook.png" alt="facebook icon" loading="lazy" /></a>
+                        <a href="#"><img src="images/icon-linkedin.png" alt="linkedin icon" loading="lazy" /></a>
+                    </nav>
+                </div>
+            </div>
+            <!--footer row 1 ends-->
+            <div class="copyright-row">
+                <div class="col-12 text-center py-5">
+                    &copy; 2023 Yoindi India, Inc. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Bootstrap JS-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

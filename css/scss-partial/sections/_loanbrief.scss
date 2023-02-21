@@ -1,0 +1,28 @@
+.section-loan-brief{
+    .rp-coltype-item{
+        display: flex;
+        justify-content: space-between;
+        &.row{
+            margin-left: -12px;
+            margin-right:-12px;
+        }
+    }
+}
+@media (max-width:767px){
+    .section-loan-brief{
+        .rp-coltype-item{            
+            &:last-child{
+                .item-col{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    padding:15px;
+                    border-bottom: 1px solid #E2E8F0;
+                    &:last-child{
+                        border-bottom: 0 none;
+                    }
+                }
+            }
+        }
+    }
+}

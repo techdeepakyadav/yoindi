@@ -1,0 +1,25 @@
+@media (max-width: 767px) {
+  .sec_compare_credit_card .item_center{
+    /* margin-bottom: 50px; */
+  }
+}
+@media (max-width: 576px) {
+    .sec_apply_instant_loan .pl_left_div img{
+        height: 14rem;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .sec_apply_instant_loan .pl_right_div{
+        padding: 10px 0px 0px 0px;
+    }
+    .sec_apply_instant_loan .pl_right_div .d-grid{
+        padding-top: -20em!important;
+        margin-top: 0!important;
+    }
+    .sec_apply_instant_loan .pl_right_div .pt-5{
+        padding-top: 0em!important;
+        margin-top: 0!important;
+    }
+}
